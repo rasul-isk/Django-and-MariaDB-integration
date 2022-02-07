@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+
+    <body>
+        <div>
+            <p style="font-size:120%;"><a href="/">Home Page</a> | <a href="/aboutme">About Me</a> | <a href="/CV">CV</a> | <a href="/computing">Computing Technologies</a> | <a href="/hobbies">Hobbies</a> | <a href="/feedback">Give Us Feedback!</a> | <a href="/recent">Recent Feedbacks</a></p>
+        </div>
+
+
+            <h2>{{ heading }}</h2>
+
+        {% block body %}
+        {% endblock %}
+
+        <hr>
+        Copyright (c) 2021 by Rasul Iskandarov.
+
+    </body>
+
+</html>        

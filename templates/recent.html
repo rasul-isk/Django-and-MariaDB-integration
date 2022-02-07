@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h1>{{ title }}</h1>
+
+<br>
+<div>
+    <table border="1" align="left">
+        <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>E-mail</th>
+            <th>Feedback</th>
+            <th>Date & Time</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for line in data %}
+                <tr>
+                    <td>&nbsp;{{line[0]}}&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;{{line[1]}}&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;{{line[2]}}&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;{{line[3]}}&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br><br><br><br>
+{% for line in data %}
+<br><br>
+{% endfor %}
+
+{% endblock %}

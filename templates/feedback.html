@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<img src="static/feedback.png" width="17%">
+
+<h1>Share your thoughts!</h1>
+
+<p style="font-size:120%;">
+Send us anonymous feeedback and we will read it as soon as possible.<br>
+</p>
+
+<form action="/savedata" method="post">
+    <fieldset style="max-width: fit-content;">
+            <table>
+            <br>
+            <label style="font-size:150%;" for="name">Full Name : </label>
+            <input required type="text"type="text" name="name"> <br><br>
+
+            <label style="font-size:150%;" for="email">Your email : </label>
+            <input required type="text"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" stype="email" name="email"> <br><br>
+
+            <label style="font-size:150%;" for="message">Comment : </label>
+            <input required type="text" type="text" min="0" max="100" name="message"> <br><br>
+
+            <center><input style="font-size:140%;" type="submit" value="Share Feedback!"></center>
+            <br>
+        </table>
+    </fieldset>
+        <br>
+
+</form>
+
+
+{% endblock %}
